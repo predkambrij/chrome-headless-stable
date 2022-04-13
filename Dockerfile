@@ -1,6 +1,8 @@
-FROM ubuntu:22.04
+FROM ubuntu:21.10
 
 LABEL maintainer "Alpeware <info@alpeware.com>"
+
+ENV DEBIAN_FRONTEND noninteractive
 
 EXPOSE 9222
 
