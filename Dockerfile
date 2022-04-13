@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
 LABEL maintainer "Alpeware <info@alpeware.com>"
 
@@ -8,8 +8,6 @@ RUN apt-get update -qqy \
   && apt-get -qqy install libnss3 libnss3-tools libfontconfig1 wget ca-certificates apt-transport-https inotify-tools \
   gnupg \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
-
-#ENV CHROME_VERSION=92.0.4515.131
 
 RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
   && echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
